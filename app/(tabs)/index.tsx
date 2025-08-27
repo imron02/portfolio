@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import { View } from "react-native";
 import { Text } from "~/components/ui/text";
 
@@ -28,12 +29,22 @@ export default function Tab() {
           {/* Profile image placeholder with border */}
           <View className="w-full aspect-[3/2] bg-gray-200 border-4 border-black mb-6">
             <View className="w-full h-full flex items-center justify-center">
-              <Text className="text-gray-400">Profile Image Placeholder</Text>
+              <Image
+                source={require("~/assets/images/profile.png")}
+                className="w-full h-full"
+                contentFit="cover"
+              />
             </View>
           </View>
 
           {/* Pixel art hand icon placeholder */}
-          <View className="absolute -top-4 -left-4 w-16 h-16 bg-pink-500" />
+          <View className="absolute -top-12 -left-16">
+            <Image
+              source={require("~/assets/images/hand.png")}
+              className="w-[210px] h-[141px]"
+              contentFit="contain"
+            />
+          </View>
 
           {/* Name tag with pink background */}
           <View className="self-end bg-pink-500 border-4 border-black py-2 px-4 w-fit shadow-[4px_4px_0px_rgb(0,0,0)]">
@@ -41,10 +52,22 @@ export default function Tab() {
           </View>
 
           {/* Pixel art heart icon placeholder */}
-          <View className="absolute top-16 -right-8 w-16 h-16 bg-pink-500" />
+          <View className="absolute top-16 -right-12">
+            <Image
+              source={require("~/assets/images/red-heart.png")}
+              className="w-[158px] h-[140px]"
+              contentFit="contain"
+            />
+          </View>
 
           {/* Pixel art hand icon placeholder */}
-          <View className="absolute -bottom-4 -left-4 w-16 h-16 bg-pink-500" />
+          <View className="absolute -bottom-8 -left-4">
+            <Image
+              source={require("~/assets/images/blue-heart.png")}
+              className="w-[210px] h-[141px]"
+              contentFit="contain"
+            />
+          </View>
         </View>
       </View>
     </View>
